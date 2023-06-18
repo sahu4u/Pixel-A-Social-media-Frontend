@@ -1,8 +1,28 @@
-import React from 'react'
+import React, { useContext, useRef } from 'react'
 import "./login.css"
+import {preventDefault} from "react"
+import { loginCall } from '../../apiCalls';
+import {AuthContext} from "../../context/AuthContext"
+import { Link } from 'react-router-dom';
+
 
 export default function Login() {
-  return (
+
+    const email=useRef();
+    const password=useRef();
+
+    const {user, isFetching, error, dispatch}=useContext(AuthContext);
+
+    const handleClick = (e) =>{
+        e.preventDefault();
+        console.log("Clicked")
+        loginCall({email:email.current.value, password:password.current.value},dispatch);
+    };
+
+    // console.log(user)
+
+
+    return (
     <div className="login">
         <div className="loginWrapper">
             <div className="loginLeft">
@@ -12,13 +32,33 @@ export default function Login() {
                 </span>
             </div>
             <div className="loginRight">
-                <div className="loginBox">
-                    <input placeholder='Email' className="loginInput" />
-                    <input placeholder='Password' className="loginInput" />
-                    <button className="loginButton">Log In</button>
+                <form className="loginBox" onSubmit={handleClick}>
+                    <input 
+                        placeholder='Email' 
+                        required
+                        type="email" 
+                        ref={email} 
+                        className="loginInput" 
+                    />
+                    <input 
+                        placeholder='Password' 
+                        required
+                        minLength={6}
+                        type="password" 
+                        ref={password} 
+                        className="loginInput" 
+                    />
+                    <button 
+                        className="loginButton">
+                        {isFetching ? "Loading ....." : "Log In"}
+                    </button>
                     <span className="loginForgot">Forgot Password ?</span>
-                    <button className="loginRegisterButton">Create a New Account</button>
-                </div>
+                    <button className="loginRegisterButton">
+                    <Link to= "/register" style={{textDecoration:"none", color:"white"}}>
+                            Create a New Account
+                    </Link>
+                    </button>
+                </form>
             </div>
         </div>
     </div>

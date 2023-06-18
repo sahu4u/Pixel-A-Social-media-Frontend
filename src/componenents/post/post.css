@@ -49,10 +49,15 @@
     align-items: center;
     justify-content: space-between;
 }
-.postbottomLeft{
+.postText{
+    font-family: 'Roboto', sans-serif;
+}
+.postbBottomLeft{
+    /* flex:3; */
     display:flex;
     align-items: center;
 }
+
 .likeIcon{
     height:24px;
     width:24px;
@@ -62,8 +67,111 @@
 .postLikeCount{
     font-size: 15px;
 }
+.postBottomRight{
+   /* flex: 1.5; */
+    padding: 5px;
+    justify-content: space-between;
+
+}
+.postDelete {
+    margin-right: 15px;
+    cursor: pointer;
+    border-bottom: 1px dashed gray;
+    size: 25px;
+    color: grey;
+}
+
+.postDelete:hover{
+    color: black;
+}
+
 .postCommentText{
     cursor: pointer;
     border-bottom: 1px dashed gray;
     font-size: 15px;
+    color: grey;
 }
+.postCommentText:hover{
+    color: black;
+}
+.writeComment{
+   
+    border-top: dashed 1px grey;
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-right:5px;
+    display: flex;
+    padding:5px 5px;
+    align-items: center;
+}
+.commentProfileImg{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin:0 10px 0 10px ;
+}
+.commentInput{
+    border: none;
+    width: 70%;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+.commentInput:focus{
+    outline:none;
+    
+}
+.doneButton{
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: green;
+    font-weight: 500;
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+}
+.commentBox{
+    border: 1px lightgrey solid ;
+    padding: 5px;
+    border-radius: 15px;
+    
+}
+.commentHeading{
+    margin:7px;
+    font-weight:500;
+    
+}
+.commentFull{
+    
+    width: 80%;
+    /* display:flex; */
+    margin:auto;
+}
+/* .imgAndPhoto{
+    display: flex;
+    align-items: center;
+
+}
+.commentFullImg{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin:0 10px 0 10px ;
+
+}
+.commenterName{
+    font-weight: 500;
+    color: black;
+}
+.comment{
+    margin-left: 45px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(48, 47, 47);
+    font-size: 13px;
+    font-weight: 500;
+
+} */

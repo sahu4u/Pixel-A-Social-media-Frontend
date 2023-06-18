@@ -1,0 +1,60 @@
+.commentBox{
+    border: 1px lightgrey solid ;
+    padding: 5px;
+    border-radius: 15px;
+    
+}
+.commentHeading{
+    margin:7px;
+    font-weight:500;
+}
+.commentFull{
+    
+    width: 80%;
+    /* display:flex; */
+    margin:auto;
+}
+.imgAndPhoto{
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+    border-bottom: 1px solid lightblue;
+
+}
+.commentFullImg{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin:0 10px 0 10px ;
+    float: left;
+
+}
+.commenterName{
+    font-weight: 500;
+    font-size: 18px;
+    color: black;
+    margin-top: 2px;
+}
+.comment{
+    /* margin-left: 45px; */
+    margin-bottom: 5px;
+    margin-left: 1.5px;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(48, 47, 47);
+    font-size: 14px;
+    font-weight: 500;
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.commentTime{
+    font-size: 10px;
+}
+.timeName{
+    display: flex;
+    text-align: center;
+}

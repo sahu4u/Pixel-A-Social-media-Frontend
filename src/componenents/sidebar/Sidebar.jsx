@@ -11,18 +11,22 @@ import { Event } from '@mui/icons-material'
 import { School } from '@mui/icons-material'
 import { Users } from '../dummyData'
 import CloseFriend from '../closeFriend/CloseFriend'
+import { Link } from 'react-router-dom'
 
 
 export default function Sidebar() {
   return (
     <div className='sidebar'>
         <div className="sidebarWrapper">
-            <ul className="sidebarList">
-                <li className="sidebarListItem">
-                    <RssFeed className='sidebarIcon'/>
-                    <span className='sidebarListItemText'>Feed</span>
-                </li>
-            </ul>
+            <Link to="/" style={{textDecoration:"none", color: "black"}}>
+                <ul className="sidebarList">
+                    <li className="sidebarListItem">
+                        <RssFeed className='sidebarIcon'/>
+                        <span className='sidebarListItemText'>Feed</span>
+                    </li>
+                </ul>
+            </Link>
+            
 
             <ul className="sidebarList">
                 <li className="sidebarListItem">
@@ -45,12 +49,17 @@ export default function Sidebar() {
                 </li>
             </ul>
 
-            <ul className="sidebarList">
-                <li className="sidebarListItem">
-                    <Bookmark className='sidebarIcon'/>
-                    <span className='sidebarListItemText'>Saved</span>
-                </li>
-            </ul>
+            <Link to="/saved" style={{textDecoration:"none", color: "black"}}>
+
+                    <ul className="sidebarList">
+                        <li className="sidebarListItem">
+                            <Bookmark className='sidebarIcon'/>
+                            <span className='sidebarListItemText'>Saved</span>
+                        </li>
+                    </ul>
+
+            </Link>
+            
 
             <ul className="sidebarList">
                 <li className="sidebarListItem">

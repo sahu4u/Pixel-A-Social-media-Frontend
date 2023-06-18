@@ -15,6 +15,40 @@
     height:250px;
     object-fit: cover;
 }
+.Box{
+    position: relative;
+}
+.Options{
+    display: flex;
+    /* position: absolute;
+    top:12px;
+    right: 18px; */
+}
+.Icon{
+    top:24px;
+    right: 46px;
+    position: absolute;
+    size: 30px;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+.coverButton{
+    top:24px;
+    right: 7px;
+    background-color: transparent;
+    outline: none;
+    border: transparent;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+}
+.Icon:hover{
+    color: grey;
+    
+}
+
+
 .profileUserImg{
     width: 150px;
     height: 150px;
@@ -27,6 +61,26 @@
     top:150px;
     border:3px solid white;
 
+}
+
+.dpIcon{
+    position: absolute;
+    /* margin: auto; */
+    cursor: pointer;
+    right: 40%;
+    top:320px;
+    color: green;
+}
+
+.dpButton{
+    background-color: transparent;
+    position: absolute;
+    outline: none;
+    border: white;
+    cursor: pointer;
+    right: 36%;
+    top:320px;
+    color: blue;
 }
 .profileInfo{
     display: flex;
